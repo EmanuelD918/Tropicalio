@@ -1,37 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
-
-
 :root {
     --laranja-claro: #f138ba;
+    --roxo: #c235cf;
 }
 
+/* Novos estilos adicionados */
+.font-controls {
+    position: absolute;
+    right: 140px;
+    top: 20px;
+    z-index: 1000;
+}
+
+.btn-font {
+    background-color: var(--roxo) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--laranja-claro) !important;
+}
+
+.btn-font:hover {
+    transform: scale(1.1);
+    background-color: var(--laranja-claro) !important;
+    box-shadow: 0 0 8px rgba(241, 56, 186, 0.5);
+}
+
+html {
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+/* Seus estilos originais abaixo (com ajustes de tamanho de fonte) */
 body {
     background-color: black;
     font-size: 1rem;
     font-family: 'Montserrat';
 }
 
+p {
+    color: var(--laranja-claro);
+    font-size: 1rem;
+}
+
 header {
     background-color: #000000;
 }
-
 
 section {
     padding-bottom: 5rem;
 }
 
-
 .nav-link {
-    color: #c235cf;
+    color: var(--roxo);
     font-weight: 600;
 }
 
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('img/Jojo1.jgp');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
     border-radius: 80px;
@@ -41,7 +74,6 @@ section {
     margin: 0 auto;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -50,7 +82,6 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -58,23 +89,18 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
-
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
-
 
 #tropicalia {
     position: relative;
@@ -82,9 +108,8 @@ section {
     margin-top: 3rem;
     margin-bottom: 3rem;
     background: url('img/Joestar_Birthmark.svg.png') top right no-repeat,
-        url('img/StoneMaskAnime.png') bottom left no-repeat;
+                url('img/StoneMaskAnime.png') bottom left no-repeat;
     background-size: 140px 180px;
-    /* Ajuste o tamanho conforme necessário */
 }
 
 #tropicalia .container {
@@ -93,9 +118,7 @@ section {
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
-
 
 h2 {
     font-family: 'Lemon', serif;
@@ -106,7 +129,6 @@ h2 {
 
 #galeria {
     background-color: #000000;
-
 }
 
 .fundo-galeria {
@@ -118,28 +140,35 @@ h2 {
     background-image: url('img/Jojo1.jgp');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
     background-color: #000000;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: #c235cf;
+    background-color: var(--roxo);
     border: none;
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #000000;
+    background-color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .font-controls {
+        right: 20px;
+        top: 10px;
+    }
+    
+    .btn-font {
+        width: 30px;
+        height: 30px;
+    }
 }
