@@ -14,8 +14,20 @@
 <body>
     <header class=" p-5">
 
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="Logotipo da Tropicália" class="nav-img " loading="lazy">
+        <nav class="container d-flex justify-content-between align-items-center position-relative">
+            <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="Logotipo com letras japonesas traduzido como As aventuras Bizarras de Jojo" class="nav-img " loading="lazy">
+            
+            <!-- Botões de controle de fonte (NOVO) -->
+            <div class="font-controls d-flex gap-2 me-3">
+                <button class="btn btn-sm btn-font" id="decreaseFont" aria-label="Diminuir fonte">
+                    <i class="bi bi-dash-lg"></i>
+                </button>
+                <button class="btn btn-sm btn-font" id="resetFont" aria-label="Tamanho original">A</button>
+                <button class="btn btn-sm btn-font" id="increaseFont" aria-label="Aumentar fonte">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+
             <ul class="nav mt-5">
                 <li class="nav-item"><a class="nav-link" href="#inicio">anime</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">mangá</a></li>
@@ -71,7 +83,7 @@
 
         <section id="contato">
             <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
                     <h2 class="mb-3">Entre em contato e receba um
                         mangá personalizado
                     </h2>
