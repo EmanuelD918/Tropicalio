@@ -12,20 +12,27 @@
 </head>
 
 <body>
-    <header class=" p-5">
-
+    <header class="p-5">
         <nav class="container d-flex justify-content-between align-items-center position-relative">
-            <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="A imagem contém o logotipo do anime e mangá JoJo's Bizarre Adventure (JoJo no Kimyō na Bōken), escrito em japonês. O texto tem um estilo dinâmico com um degradê rosa e branco na parte superior e caracteres vermelhos contornados em branco na parte inferior. O design transmite uma sensação de impacto e ação." class="nav-img " loading="lazy">
+            <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="Logotipo JoJo's Bizarre Adventure" class="nav-img" loading="lazy">
             
-            <!-- Botões de controle de fonte (NOVO) -->
-            <div class="font-controls d-flex gap-2 me-3">
-                <button class="btn btn-sm btn-font" id="decreaseFont" aria-label="Diminuir fonte">
-                    <i class="bi bi-dash-lg"></i>
-                </button>
-                <button class="btn btn-sm btn-font" id="resetFont" aria-label="Tamanho original">A</button>
-                <button class="btn btn-sm btn-font" id="increaseFont" aria-label="Aumentar fonte">
-                    <i class="bi bi-plus-lg"></i>
-                </button>
+            <!-- Botão único de Acessibilidade -->
+            <div class="accessibility-container me-3">
+                <button class="btn btn-sm btn-accessibility" id="accessibilityToggle" aria-label="Acessibilidade">Acessibilidade</button>
+                
+                <!-- Menu de Acessibilidade (inicialmente oculto) -->
+                <div id="accessibilityMenu" class="accessibility-menu d-none">
+                    <button class="btn btn-sm btn-accessibility-control" id="decreaseFont" aria-label="Diminuir fonte">
+                        <i class="bi bi-dash-lg"></i>
+                    </button>
+                    <button class="btn btn-sm btn-accessibility-control" id="resetFont" aria-label="Tamanho original">A</button>
+                    <button class="btn btn-sm btn-accessibility-control" id="increaseFont" aria-label="Aumentar fonte">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                    <button class="btn btn-sm btn-accessibility-control" id="toggleContrast" aria-label="Alto Contraste">
+                        <i class="bi bi-brightness-high"></i>
+                    </button>
+                </div>
             </div>
 
             <ul class="nav mt-5">
@@ -34,48 +41,39 @@
                 <li class="nav-item"><a class="nav-link" href="#contato">partes</a></li>
             </ul>          
         </nav>
-       
     </header>
 
-
     <main class="container my-5">
-
         <section id="inicio" class="my-5">
             <div class="inicio-fundo d-flex justify-content-between align-items-center">
                 <div class="esquerda-conteudo">
                     <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="A imagem contém o logotipo do anime e mangá JoJo's Bizarre Adventure (JoJo no Kimyō na Bōken), escrito em japonês. O texto tem um estilo dinâmico com um degradê rosa e branco na parte superior e caracteres vermelhos contornados em branco na parte inferior. O design transmite uma sensação de impacto e ação." class="mb-3" width="563"
+                    <img src="img/JoJo's_Bizarre_Adventure_logo.png" alt="Logotipo JoJo's Bizarre Adventure" class="mb-3" width="563"
                         height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        ler!</a>
+                    <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero ler!</a>
                 </div>
-
             </div>
         </section>
 
         <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
             <div class="container d-flex align-items-center ">
-                  <div class="col-5">
+                <div class="col-5">
                     <h2>O que é Jojo?</h2>
                     <p class="p-2">Jojo nada mais é do que uma aventura bizarra transmitida por gerações de uma família. Os Jojos, nossos personagens principais,
-                        são sempre o centro da atenção e sempre entram em conflitos com inimigos inimaginaveis.</p>
+                        são sempre o centro da atenção e sempre entram em conflitos com inimigos inimagináveis.</p>
                 </div>
             </div>
         </section>
 
         <section id="galeria">
             <h2 class="text-center pt-5">Primeira e últimas partes lançadas</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
+            <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="./img/jojo2.jpg" alt="A imagem é um pôster de JoJo's Bizarre Adventure (Phantom Blood), mostrando Jonathan Joestar e Dio Brando com roupas elegantes. Dio que está levemente atrás de Jonathan segura a máscara de pedra representando o abandono de sua humanidade, enquanto Jonathan segura um livro, representando a busca pela evolução. O fundo escuro e sombrio destaca a rivalidade entre eles."
-                            class="img-fluid rounded-5" loading="lazy">
+                        <img src="./img/jojo2.jpg" alt="Pôster de JoJo's Bizarre Adventure (Phantom Blood)" class="img-fluid rounded-5" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="img/jojo3.jpg" alt="Pôster promocional da netflix do lançamento da segunda parte de Jojo Stone Ocean, na imagem podemos ver os 6 personagens principais de Stone Ocean em poses que os representam. Ao fundo, podemos ver fios azuis, representando o stand da Jolyne e um fundo que mistura algo similar a gases roxos e verdes, representando a incerteza do desfecho da parte" class="img-fluid rounded-5"
-                            loading="lazy">
+                        <img src="img/jojo3.jpg" alt="Pôster promocional do lançamento da segunda parte de Jojo Stone Ocean" class="img-fluid rounded-5" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -84,28 +82,22 @@
         <section id="contato">
             <div class="container p-5 d-flex justify-content-center">
                 <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em contato e receba um
-                        mangá personalizado
-                    </h2>
+                    <h2 class="mb-3">Entre em contato e receba um mangá personalizado</h2>
                     <form>
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
                         </div>
                         <div class="form-group mb-3">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar
-                                mensagem</button>
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar mensagem</button>
                         </div>
                     </form>
                 </div>
@@ -120,7 +112,6 @@
         <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
     </footer>
     <script src="script.js"></script>
-
 </body>
 
 </html>
