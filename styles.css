@@ -6,15 +6,36 @@
     --roxo: #c235cf;
 }
 
-/* Novos estilos adicionados */
-.font-controls {
+/* Novos estilos para o botão de Acessibilidade e o menu */
+.accessibility-container {
     position: absolute;
     right: 140px;
     top: 20px;
     z-index: 1000;
 }
 
-.btn-font {
+.btn-accessibility {
+    background-color: var(--roxo) !important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 5px 10px;
+    border: 2px solid var(--laranja-claro) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-accessibility:hover {
+    background-color: var(--laranja-claro) !important;
+    transform: scale(1.05);
+}
+
+.accessibility-menu {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Estilo dos botões de controle dentro do menu */
+.btn-accessibility-control {
     background-color: var(--roxo) !important;
     color: white !important;
     border-radius: 50% !important;
@@ -27,7 +48,7 @@
     border: 2px solid var(--laranja-claro) !important;
 }
 
-.btn-font:hover {
+.btn-accessibility-control:hover {
     transform: scale(1.1);
     background-color: var(--laranja-claro) !important;
     box-shadow: 0 0 8px rgba(241, 56, 186, 0.5);
@@ -38,7 +59,27 @@ html {
     transition: font-size 0.3s ease;
 }
 
-/* Seus estilos originais abaixo (com ajustes de tamanho de fonte) */
+/* Modo alto contraste */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast header,
+.high-contrast footer,
+.high-contrast .formulario {
+    background-color: #000;
+}
+
+.high-contrast p,
+.high-contrast li,
+.high-contrast a,
+.high-contrast h1, 
+.high-contrast h2 {
+    color: #fff !important;
+}
+
+/* Seus estilos originais abaixo */
 body {
     background-color: black;
     font-size: 1rem;
@@ -163,13 +204,46 @@ h2 {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .font-controls {
+    .accessibility-container {
         right: 20px;
         top: 10px;
     }
     
-    .btn-font {
+    .btn-accessibility,
+    .btn-accessibility-control {
         width: 30px;
         height: 30px;
+        font-size: 0.8rem;
     }
+}
+
+/* ------------------------------------------------------------
+   EFEITO DE BRILHO VERMELHO AO NAVEGAR COM TAB (FOCUS)
+-------------------------------------------------------------*/
+
+/* Define a animação para o brilho vermelho */
+@keyframes redGlow {
+  0% {
+    box-shadow: 0 0 5px 0 red;
+  }
+  50% {
+    box-shadow: 0 0 15px 5px red;
+  }
+  100% {
+    box-shadow: 0 0 5px 0 red;
+  }
+}
+
+/* Aplica a animação e a alteração de cor aos elementos interativos ao receberem foco via teclado */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.btn-accessibility-control:focus-visible {
+  outline: none;
+  animation: redGlow 1.5s ease-in-out infinite;
+  border-color: red;
+  background-color: #ffe6e6;
+  color: #900;
 }
